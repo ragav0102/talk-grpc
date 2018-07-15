@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package math_functions;
+
+service MathFunctions {
+
+  rpc FetchSum(InputNumbers) returns (ResultNumber) {}
+
+  rpc FetchProduct(InputNumbers) returns (ResultNumber) {}
+
+  rpc FetchDiff(InputNumbers) returns (ResultNumber) {}
+}
+
+message InputNumbers {
+  int32 n1 = 1;
+  int32 n2 = 2;
+}
+
+message ResultNumber {
+  int32 result = 1;
+}
